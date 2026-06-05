@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- スマホ対応 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Darts Count Up</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- アプリ全体 -->
+    <div id="app">
+
+        <!-- =========================
+             現在情報エリア
+        ========================== -->
+        <header id="gameInfo">
+
+            <!-- 現在ラウンド -->
+            <div class="infoItem">
+                <span class="label">Round</span>
+                <span id="roundText">1</span>
+            </div>
+
+            <!-- 現在投数 -->
+            <div class="infoItem">
+                <span class="label">Throw</span>
+                <span id="throwText">1 / 3</span>
+            </div>
+
+            <!-- 合計点 -->
+            <div class="infoItem">
+                <span class="label">Total</span>
+                <span id="totalScoreText">0</span>
+            </div>
+
+            <!-- 目標点 -->
+            <div class="infoItem">
+                <span class="label">Target</span>
+                <span id="targetScoreText">500</span>
+            </div>
+
+            <!-- 残り点 -->
+            <div class="infoItem">
+                <span class="label">Remain</span>
+                <span id="remainScoreText">500</span>
+            </div>
+
+        </header>
+
+        <!-- =========================
+             ダーツボード
+        ========================== -->
+        <main id="boardContainer">
+
+            <!-- JSでセグメント生成 -->
+            <div id="dartBoard">
+
+                <!-- Bull -->
+                <div id="bullContainer">
+
+                    <button class="bullButton" data-score="25">
+                        25
+                    </button>
+
+                    <button class="bullButton" data-score="50">
+                        50
+                    </button>
+
+                </div>
+<div id="finishOverlay">
+    Finish
+</div>
+            </div>
+
+            <!-- 入力表示 -->
+            <div id="hitDisplay">
+                T20 +60
+            </div>
+
+        </main>
+
+        <!-- =========================
+             操作ボタン
+        ========================== -->
+        <section id="controlArea">
+
+            <button id="undoButton">
+                Undo
+            </button>
+
+            <button id="resetButton">
+                Reset
+            </button>
+
+            <button id="changeTargetButton">
+                Target
+            </button>
+
+        </section>
+
+        <!-- =========================
+             ラウンド履歴
+        ========================== -->
+        <section id="historyArea">
+
+            <h2>History</h2>
+
+            <!-- JSで履歴追加 -->
+            <div id="historyList"></div>
+
+        </section>
+<section id="statsArea">
+
+    <h2>Stats</h2>
+
+    <div id="roundAverageText"></div>
+
+    <div id="dartAverageText"></div>
+
+</section>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="main.js"></script>
+
+</body>
+</html>
