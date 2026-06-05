@@ -95,17 +95,12 @@ body {
 
 /* D/S/T ボタン */
 .segmentButton {
-    width: 50px;
-    height: 50px;
-
-    border: none;
+    width: 56px;
+    height: 56px;
 
     border-radius: 6px;
 
-    color: white;
-
-    font-size: 14px;
-    font-weight: bold;
+    font-size: 12px;
 }
 
 
