@@ -1,3 +1,15 @@
+const isMobile =
+    window.innerWidth < 600;
+
+const outerRadius =
+    isMobile ? 34 : 42;
+
+const middleRadius =
+    isMobile ? 24 : 30;
+
+const innerRadius =
+    isMobile ? 16 : 20;
+
 /* =========================
    ダーツ盤順
 ========================= */
